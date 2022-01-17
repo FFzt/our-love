@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="shortcut icon" href="../ico/faviconJX.ico">
     <title>张涛 ❤️ 黄心雨</title>
     <style>
         body {
             -webkit-font-smoothing: antialiased;
             font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-/*            background-image: url('./background.jpg');   */
+            /*            background-image: url('./background.jpg');   */
             font-size: 85%;
             margin: 0;
         }
@@ -48,11 +49,12 @@
     <div class="timer">
         <b id="d"></b> 天 <b id="h"></b> 时 <b id="m"></b> 分 <b id="s"></b> 秒
     </div>
+    <img style="max-width:100%;overflow:hidden;" src="../picture/bb.png" alt="">
 </div>
 
 <script>
     function timer() {
-        var date1= '2021/12/24 21:21:21';  //开始时间
+        var date1 = '2021/12/24 21:21:21';  //开始时间
         var date2 = new Date(); //结束时间
         var t = date2.getTime() - new Date(date1).getTime();
         var h = ~~(t / 1000 / 60 / 60 % 24);
@@ -72,6 +74,7 @@
         document.getElementById('m').innerHTML = m;
         document.getElementById('s').innerHTML = s;
     }
+
     timer();
     setInterval(timer, 1000);
 </script>
