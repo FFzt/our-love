@@ -1,1 +1,1 @@
-- 使用命令 `nohup java -jar xxxxx.jar  > cs.txt & ` 启动项目
+- 使用命令 `nohup java -jar our-love-0.0.1-SNAPSHOT.jar  > cs.txt & ` 启动项目
