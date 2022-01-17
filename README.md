@@ -1,0 +1,1 @@
+- 使用命令 `nohup java -jar xxxxx.jar  > cs.txt & ` 启动项目
