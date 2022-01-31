@@ -7,7 +7,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="shortcut icon" href="../ico/faviconJX.ico">
+    <link rel="shortcut icon" href="../ico/favicon2.ico">
     <title>张涛 ❤️ 黄心雨</title>
     <style>
         body {
@@ -45,34 +45,57 @@
 
 <body>
 <div class="content">
-    <h2>我们已经在一起了</h2>
     <div class="timer">
-        <b id="d"></b> 天 <b id="h"></b> 时 <b id="m"></b> 分 <b id="s"></b> 秒
+        我们已相识: <b id="d1"></b> 天 <b id="h1"></b> 时 <b id="m1"></b> 分 <b id="s1"></b> 秒
     </div>
+
+    <div class="timer">
+        我们已在一起: <b id="d2"></b> 天 <b id="h2"></b> 时 <b id="m2"></b> 分 <b id="s2"></b> 秒
+    </div>
+
     <img style="max-width:100%;overflow:hidden;" src="../picture/bb.png" alt="">
 </div>
 
 <script>
     function timer() {
         var date1 = '2021/12/24 21:21:21';  //开始时间
-        var date2 = new Date(); //结束时间
-        var t = date2.getTime() - new Date(date1).getTime();
-        var h = ~~(t / 1000 / 60 / 60 % 24);
-        if (h < 10) {
-            h = "0" + h;
+        var date2 = '2022/01/24 14:29:00';  //开始时间
+        var date3 = new Date(); //结束时间
+        var t1 = date3.getTime() - new Date(date1).getTime();
+        var t2 = date3.getTime() - new Date(date2).getTime();
+        var h1 = ~~(t1 / 1000 / 60 / 60 % 24);
+        if (h1 < 10) {
+            h1 = "0" + h1;
         }
-        var m = ~~(t / 1000 / 60 % 60);
-        if (m < 10) {
-            m = "0" + m;
+        var m1 = ~~(t1 / 1000 / 60 % 60);
+        if (m1 < 10) {
+            m1 = "0" + m1;
         }
-        var s = ~~(t / 1000 % 60);
-        if (s < 10) {
-            s = "0" + s;
+        var s1 = ~~(t1 / 1000 % 60);
+        if (s1 < 10) {
+            s1 = "0" + s1;
         }
-        document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
-        document.getElementById('h').innerHTML = h;
-        document.getElementById('m').innerHTML = m;
-        document.getElementById('s').innerHTML = s;
+        document.getElementById('d1').innerHTML = ~~(t1 / 1000 / 60 / 60 / 24);
+        document.getElementById('h1').innerHTML = h1;
+        document.getElementById('m1').innerHTML = m1;
+        document.getElementById('s1').innerHTML = s1;
+
+        var h2 = ~~(t2 / 1000 / 60 / 60 % 24);
+        if (h2 < 10) {
+            h2 = "0" + h2;
+        }
+        var m2 = ~~(t2 / 1000 / 60 % 60);
+        if (m2 < 10) {
+            m2 = "0" + m2;
+        }
+        var s2 = ~~(t2 / 1000 % 60);
+        if (s2 < 10) {
+            s2 = "0" + s2;
+        }
+        document.getElementById('d2').innerHTML = ~~(t2 / 1000 / 60 / 60 / 24);
+        document.getElementById('h2').innerHTML = h2;
+        document.getElementById('m2').innerHTML = m2;
+        document.getElementById('s2').innerHTML = s2;
     }
 
     timer();
