@@ -64,4 +64,8 @@ release.properties
 /.logs/
 ### 过滤无用的文件 ###
 *.lock.db
+<<<<<<< HEAD
 *.trace.db
+=======
+*.trace.db
+>>>>>>> master
